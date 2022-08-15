@@ -8,14 +8,15 @@ from sqlalchemy.orm import declarative_base, session
 from wtforms import StringField, SubmitField, validators
 from wtforms.validators import DataRequired
 import requests
+import os
 
 
-api_key="d38d8fd1959b1e21e64af79db3335ac5"
-# example_request="https://api.themoviedb.org/3/movie/550?api_key=d38d8fd1959b1e21e64af79db3335ac5"
+api_key=os.environ.get('movie_key')
+# example_request="https://api.themoviedb.org/3/movie/550?api_key=api_key"
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get('movie_secret_key')
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my-movies.db'
