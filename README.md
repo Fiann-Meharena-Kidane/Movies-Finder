@@ -9,3 +9,5 @@
 3. Next, app addes that movies to DB and renders it on homepage as a movie card. 
 4. User can edit or delete a movie card 
 5. Whenever user runs the app, it fetches the available movies from DB and renders them . 
+
+### Can Try : --> https://finan-movies.herokuapp.com/
